@@ -2,14 +2,22 @@
   "name": "kafkatide-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "prestart": "npm run build",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.4.5",
     "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "kafkatide": "^1.0.3",
+    "rxjs": "^7.8.1"
   }
 }
